@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<darkModeApp:BasePage
+    x:Class="DarkModeApp.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:darkModeApp="clr-namespace:DarkModeApp;assembly=DarkModeApp"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    BackgroundColor="{DynamicResource BackgroundColor}"
+    mc:Ignorable="d">
+
+    <StackLayout
+        HorizontalOptions="FillAndExpand"
+        Orientation="Vertical"
+        Spacing="50"
+        VerticalOptions="Center">
+        <Label
+            FontSize="Medium"
+            HorizontalTextAlignment="Center"
+            Text="Change the theme to"
+            TextColor="{DynamicResource TextColor}" />
+
+        <StackLayout
+            Padding="10"
+            Orientation="Horizontal"
+            Spacing="20">
+            <Button
+                Clicked="SwitchToDarkMode"
+                Style="{DynamicResource DarkButton}"
+                Text="Dark" />
+            <Button
+                Clicked="SwitchToLightMode"
+                Style="{DynamicResource LightButton}"
+                Text="Light" />
+        </StackLayout>
+
+        <StackLayout
+            Padding="10"
+            HorizontalOptions="FillAndExpand"
+            Orientation="Horizontal"
+            Spacing="20"
+            VerticalOptions="Center">
+            <Button Style="{DynamicResource ConfirmButton}" Text="Confirm" />
+            <Button Style="{DynamicResource RejectButton}" Text="Reject" />
+        </StackLayout>
+    </StackLayout>
+
+
+</darkModeApp:BasePage>
