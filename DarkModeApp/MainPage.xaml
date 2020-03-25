@@ -3,11 +3,9 @@
     x:Class="DarkModeApp.MainPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:darkModeApp="clr-namespace:DarkModeApp;assembly=DarkModeApp"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     BackgroundColor="{DynamicResource BackgroundColor}"
-    mc:Ignorable="d">
+    NavigationPage.HasNavigationBar="False">
 
     <StackLayout
         HorizontalOptions="FillAndExpand"
@@ -15,22 +13,21 @@
         Spacing="50"
         VerticalOptions="Center">
         <Label
-            FontSize="Medium"
             HorizontalTextAlignment="Center"
-            Text="Change the theme to"
-            TextColor="{DynamicResource TextColor}" />
+            Style="{StaticResource LabelStyle}"
+            Text="Change the theme to" />
 
         <StackLayout
             Padding="10"
             Orientation="Horizontal"
             Spacing="20">
             <Button
-                Clicked="SwitchToDarkMode"
-                Style="{DynamicResource DarkButton}"
+                Clicked="OnSwitchToDarkMode"
+                Style="{StaticResource DarkButton}"
                 Text="Dark" />
             <Button
-                Clicked="SwitchToLightMode"
-                Style="{DynamicResource LightButton}"
+                Clicked="OnSwitchToLightMode"
+                Style="{StaticResource LightButton}"
                 Text="Light" />
         </StackLayout>
 
@@ -40,8 +37,12 @@
             Orientation="Horizontal"
             Spacing="20"
             VerticalOptions="Center">
-            <Button Style="{DynamicResource ConfirmButton}" Text="Confirm" />
-            <Button Style="{DynamicResource RejectButton}" Text="Reject" />
+            <Button
+                Clicked="OnConfirmCreated"
+                Style="{StaticResource ConfirmButton}" Text="Confirm" />
+            <Button
+                Clicked="OnRejectClicked"
+                Style="{StaticResource RejectButton}" Text="Reject" />
         </StackLayout>
     </StackLayout>
 

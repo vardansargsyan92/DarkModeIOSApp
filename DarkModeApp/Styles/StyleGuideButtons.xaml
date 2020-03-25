@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="DarkModeApp.Styles.StyleGuideButtons"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Style x:Key="ConfirmButton" TargetType="Button">
+        <Setter Property="TextColor" Value="{DynamicResource ConfirmButtonTextColor}" />
+        <Setter Property="BorderColor" Value="{DynamicResource ConfirmButtonBorderColor}" />
+        <Setter Property="BorderWidth" Value="{DynamicResource RoundedButtonBorderWidth}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource ConfirmButtonBackgroundColor}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource RoundedButtonCornerRadius}" />
+        <Setter Property="HeightRequest" Value="{DynamicResource DefaultButtonHeight}" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+    </Style>
+
+    <Style x:Key="RejectButton" TargetType="Button">
+        <Setter Property="TextColor" Value="{DynamicResource RejectButtonTextColor}" />
+        <Setter Property="BorderColor" Value="{DynamicResource RejectButtonBorderColor}" />
+        <Setter Property="BorderWidth" Value="{DynamicResource RoundedButtonBorderWidth}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource RejectButtonBackgroundColor}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource RoundedButtonCornerRadius}" />
+        <Setter Property="HeightRequest" Value="{DynamicResource DefaultButtonHeight}" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+    </Style>
+
+    <Style x:Key="DarkButton" TargetType="Button">
+        <Setter Property="TextColor" Value="{DynamicResource DarkButtonTextColor}" />
+        <Setter Property="BorderColor" Value="{DynamicResource DarkButtonBorderColor}" />
+        <Setter Property="BorderWidth" Value="{DynamicResource DefaultButtonBorderWidth}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource DarkButtonBackgroundColor}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource DefaultButtonCornerRadius}" />
+        <Setter Property="HeightRequest" Value="{DynamicResource DefaultButtonHeight}" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="VerticalOptions" Value="Start" />
+
+    </Style>
+
+    <Style x:Key="LightButton" TargetType="Button">
+        <Setter Property="TextColor" Value="{DynamicResource LightButtonTextColor}" />
+        <Setter Property="BorderColor" Value="{DynamicResource LightButtonBorderColor}" />
+        <Setter Property="BorderWidth" Value="{DynamicResource DefaultButtonBorderWidth}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource LightButtonBackgroundColor}" />
+        <Setter Property="CornerRadius" Value="{DynamicResource DefaultButtonCornerRadius}" />
+        <Setter Property="HeightRequest" Value="{DynamicResource DefaultButtonHeight}" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="VerticalOptions" Value="Start" />
+    </Style>
+
+</ResourceDictionary>

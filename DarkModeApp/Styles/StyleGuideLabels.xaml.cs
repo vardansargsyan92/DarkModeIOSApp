@@ -3,9 +3,9 @@
 namespace DarkModeApp.Styles
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class DarkTheme
+    public partial class StyleGuideLabels
     {
-        public DarkTheme()
+        public StyleGuideLabels()
         {
             InitializeComponent();
         }

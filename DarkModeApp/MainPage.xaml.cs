@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-using DarkModeApp.Styles;
 using Xamarin.Forms;
 
 namespace DarkModeApp
@@ -10,21 +9,48 @@ namespace DarkModeApp
     [DesignTimeVisible(false)]
     public partial class MainPage
     {
+        private readonly Label _label;
+
         public MainPage()
         {
             InitializeComponent();
+            _label = new Label
+                     {
+                         Text = "Welcome to Xamarin forms",
+                         Style = (Style) Application.Current.Resources["LabelStyle"],
+                         HorizontalOptions = LayoutOptions.Center,
+                         VerticalOptions = LayoutOptions.Center
+                     };
         }
 
-        private void SwitchToDarkMode(object sender, EventArgs e)
+        private void OnSwitchToDarkMode(object sender, EventArgs e)
         {
-            Application.Current.Resources = new DarkTheme();
-            App.AppTheme = "Dark";
+            App.SwitchToDarkMode();
         }
 
-        private void SwitchToLightMode(object sender, EventArgs e)
+        private void OnSwitchToLightMode(object sender, EventArgs e)
         {
-            Application.Current.Resources = new LightTheme();
-            App.AppTheme = "Light";
+            App.SwitchToLightMode();
+        }
+
+        private void OnConfirmCreated(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ContentPage
+                                 {
+                                     Title = "Confirm Page",
+                                     Content = _label,
+                                     BackgroundColor = (Color) Application.Current.Resources["BackgroundColor"]
+                                 });
+        }
+
+        private void OnRejectClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ContentPage
+                                 {
+                                     Title = "Reject Page",
+                                     Content = _label,
+                                     BackgroundColor = (Color) Application.Current.Resources["BackgroundColor"]
+                                 });
         }
     }
 }

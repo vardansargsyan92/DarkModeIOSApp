@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="DarkModeApp.Styles.StyleGuideLightColors"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Color x:Key="ConfirmButtonTextColor">Black</Color>
+    <Color x:Key="ConfirmButtonBorderColor">Green</Color>
+    <Color x:Key="ConfirmButtonBackgroundColor">White</Color>
+    <Color x:Key="RejectButtonTextColor">Black</Color>
+    <Color x:Key="RejectButtonBorderColor">Red</Color>
+    <Color x:Key="RejectButtonBackgroundColor">White</Color>
+    <Color x:Key="DarkButtonTextColor">White</Color>
+    <Color x:Key="DarkButtonBorderColor">DarkGray</Color>
+    <Color x:Key="DarkButtonBackgroundColor">DarkGray</Color>
+    <Color x:Key="LightButtonTextColor">Black</Color>
+    <Color x:Key="LightButtonBorderColor">LightGreen</Color>
+    <Color x:Key="LightButtonBackgroundColor">LightGreen</Color>
+    <Color x:Key="BackgroundColor">White</Color>
+    <Color x:Key="TextColor">Black</Color>
+</ResourceDictionary>
